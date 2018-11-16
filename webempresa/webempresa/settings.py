@@ -83,9 +83,18 @@ WSGI_APPLICATION = 'webempresa.wsgi.application'
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
 DATABASES = {
+    #'default': {
+    #    'ENGINE': 'django.db.backends.sqlite3',
+    #    'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    #}
+    #Linux
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'webPersonalEmpre$empresa',
+        'USER': 'webPersonalEmpre',
+        'PASSWORD': '"123cuatroGT"',
+        'HOST': 'webPersonalEmpresa.mysql.pythonanywhere-services.com',
+        'PORT': '',
     }
 }
 
@@ -130,10 +139,6 @@ STATIC_URL = '/static/'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),
-]
-
 #Media config
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
@@ -151,8 +156,10 @@ CKEDITOR_CONFIGS = {
     }
 }
 
+
+
 #Email config
-EMAIL_HOST = 'smtp.mailtrap.io'
-EMAIL_HOST_USER = '4686294b9257cb'
-EMAIL_HOST_PASSWORD = '6f584eb11b526c'
-EMAIL_PORT = '2525'
+#EMAIL_HOST = 'smtp.mailtrap.io'
+#EMAIL_HOST_USER = '4686294b9257cb'
+#EMAIL_HOST_PASSWORD = '6f584eb11b526c'
+#EMAIL_PORT = '2525'
